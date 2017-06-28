@@ -1,0 +1,1159 @@
+# Created by Octave 4.0.0, Fri Jun 16 15:45:28 2017 Central Daylight Time <unknown@299-H2VQZF2>
+# name: allData
+# type: matrix
+# rows: 31
+# columns: 4
+ 4 0 0 0
+ 7 5 71.42857142857143 5
+ 4 0 0 0
+ 0 0 NaN 0
+ 1 0 0 0
+ 1 0 0 0
+ 0 0 NaN 0
+ 1 0 0 1
+ 7 2 28.57142857142857 2
+ 21 8 38.09523809523809 8
+ 2 0 0 0
+ 3 0 0 2
+ 1 0 0 1
+ 1 0 0 1
+ 2 0 0 1
+ 1 1 100 1
+ 1 0 0 0
+ 43 43 100 43
+ 4 1 25 1
+ 43 15 34.88372093023256 15
+ 1 0 0 0
+ 9 1 11.11111111111111 1
+ 2 2 100 2
+ 6 0 0 0
+ 7 2 28.57142857142857 2
+ 1 0 0 0
+ 5 4 80 4
+ 1 0 0 1
+ 2 0 0 1
+ 1 0 0 1
+ 1 0 0 0
+
+
+# name: allDataDoor
+# type: matrix
+# rows: 28
+# columns: 3
+ 4 0 0
+ 7 4 57.14285714285714
+ 4 0 0
+ 0 0 NaN
+ 1 0 0
+ 1 0 0
+ 0 0 NaN
+ 1 1 100
+ 7 0 0
+ 2 0 0
+ 3 2 66.66666666666666
+ 1 1 100
+ 1 1 100
+ 2 1 50
+ 1 0 0
+ 43 41 95.34883720930233
+ 4 0 0
+ 43 0 0
+ 1 0 0
+ 2 2 100
+ 6 0 0
+ 7 2 28.57142857142857
+ 1 0 0
+ 5 0 0
+ 1 1 100
+ 2 1 50
+ 1 1 100
+ 1 0 0
+
+
+# name: ans
+# type: scalar
+0.5081967213114754
+
+
+# name: corrLeaks
+# type: scalar
+0
+
+
+# name: corrPerc
+# type: scalar
+0
+
+
+# name: counter
+# type: scalar
+0
+
+
+# name: fidL
+# type: scalar
+8
+
+
+# name: fidT
+# type: scalar
+10
+
+
+# name: fileName
+# type: sq_string
+# elements: 1
+# length: 22
+Home98_HW-L Sensor.csv
+
+
+# name: fileNameChop
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 6
+Home98
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 15
+HW-L Sensor.csv
+
+
+
+
+
+# name: filePathLeak
+# type: sq_string
+# elements: 1
+# length: 63
+C:\Users\abouv\Desktop\Sensor Data\Leaks\Home98_HW-L Sensor.csv
+
+
+# name: filePathTemp
+# type: sq_string
+# elements: 1
+# length: 67
+C:\Users\abouv\Desktop\Sensor Data\Organized\Home98_DW-L Sensor.csv
+
+
+# name: filelist
+# type: cell
+# rows: 130
+# columns: 1
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 1
+.
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 2
+..
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home103_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home103_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home104_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home113_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home117_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home118_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home123_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home125_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home131_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home132_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home140_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home141_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home143_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home152_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home153_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home154_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home158_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home159_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home15_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home163_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home168_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home169_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home16_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home171_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home172_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home173_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home174_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home176_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home176_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home178_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home179_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home17_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home185_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home185_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home187_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home18_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home192_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home195_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home19_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home19_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home201_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home208_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home209_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home210_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home210_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home213_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home213_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home215_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home215_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home220_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home221_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home225_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home22_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home231_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home234_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home238_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home244_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home247_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home248_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home248_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home24_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home251_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home251_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home251_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home253_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home255_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home257_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home25_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home260_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home261_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home264_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home267_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home269_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home271_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home272_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home273_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home275_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home276_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home281_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home282_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home291_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home292_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home294_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home299_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home29_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home300_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home302_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home305_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home305_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home30_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home310_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Home312_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home34_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home34_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home36_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home40_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home43_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home49_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home50_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home50_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home53_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home55_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home60_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home62_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home63_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home66_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home66_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home66_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 21
+Home6_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 21
+Home6_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home74_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home76_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home78_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home79_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home81_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home83_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home84_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home89_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home89_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 21
+Home8_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 21
+Home8_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home90_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home90_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home92_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home94_WM-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home97_HW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home98_DW-L Sensor.csv
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Home98_HW-L Sensor.csv
+
+
+
+
+
+# name: folderPath
+# type: sq_string
+# elements: 1
+# length: 40
+C:\Users\abouv\Desktop\Sensor Data\Leaks
+
+
+# name: folderPathTemp
+# type: sq_string
+# elements: 1
+# length: 44
+C:\Users\abouv\Desktop\Sensor Data\Organized
+
+
+# name: homeName
+# type: sq_string
+# elements: 1
+# length: 6
+Home98
+
+
+# name: ii
+# type: scalar
+130
+
+
+# name: leaks
+# type: scalar
+1
+
+
+# name: sensorChop
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 2
+HW
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 12
+L Sensor.csv
+
+
+
+
+
+# name: sensorName
+# type: sq_string
+# elements: 1
+# length: 2
+HW
+
+
+# name: testData
+# type: matrix
+# rows: 31
+# columns: 3
+ 4 0 0
+ 7 4 57.14285714285714
+ 4 0 0
+ 0 0 NaN
+ 1 0 0
+ 1 0 0
+ 0 0 NaN
+ 1 1 100
+ 7 0 0
+ 0 0 0
+ 2 0 0
+ 3 2 66.66666666666666
+ 1 1 100
+ 1 1 100
+ 2 1 50
+ 1 0 0
+ 0 0 0
+ 43 41 95.34883720930233
+ 4 0 0
+ 43 0 0
+ 0 0 0
+ 1 0 0
+ 2 2 100
+ 6 0 0
+ 7 2 28.57142857142857
+ 1 0 0
+ 5 0 0
+ 1 1 100
+ 2 1 50
+ 1 1 100
+ 1 0 0
+
+
