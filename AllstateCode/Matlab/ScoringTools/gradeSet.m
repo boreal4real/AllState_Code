@@ -1,4 +1,4 @@
-function [] = gradeSet(companyResults, companyName)
+function [] = gradeSet(companyResults, companyName, filterTest)
 
 MEAN_LOW_THRESH = 87;
 MEAN_HIGH_THRESH = 124;
@@ -22,19 +22,46 @@ meshData.HasWaterHeaterTruth = logical(meshData.HasWaterHeaterTruth);
 meshData.HasRustTruth = logical(meshData.HasRustTruth);
 meshData.WaterHeaterPresent = logical(meshData.WaterHeaterPresent);
 meshData.RustPresent = logical(meshData.RustPresent);
+meshData.Test = logical(meshData.Test);
 
-scoreDataWriteXLS(meshData, xlsxName, 'AllPhotos');
-scoreDataWriteXLS(meshData(meshData.Brightness < MEAN_LOW_THRESH,:), xlsxName, 'DarkPhotos');
-scoreDataWriteXLS(meshData(meshData.Brightness > MEAN_LOW_THRESH | meshData.Brightness < MEAN_HIGH_THRESH,:), xlsxName, 'MediumPhotos');
-scoreDataWriteXLS(meshData(meshData.Brightness > MEAN_HIGH_THRESH,:), xlsxName, 'BrightPhotos');
+if(filterTest)
+   meshData = meshData(meshData.Test, :);
+end
+overallScores = [];
 
-scoreDataWriteXLS(meshData(meshData.Variance < VAR_LOW_THRESH,:), xlsxName, 'LowVarPhotos');
-scoreDataWriteXLS(meshData(meshData.Variance > VAR_LOW_THRESH | meshData.Variance < VAR_HIGH_THRESH,:), xlsxName, 'MediumVarPhotos');
-scoreDataWriteXLS(meshData(meshData.Variance > VAR_HIGH_THRESH,:), xlsxName, 'HighVarPhotos');
+overallScores = scoreDataWriteXLS(meshData, xlsxName, 'AllPhotos', overallScores);
+overallScores = scoreDataWriteXLS(meshData(meshData.Brightness < MEAN_LOW_THRESH,:), xlsxName, 'DarkPhotos', overallScores);
+overallScores = scoreDataWriteXLS(meshData(meshData.Brightness > MEAN_LOW_THRESH | meshData.Brightness < MEAN_HIGH_THRESH,:), xlsxName, 'MediumPhotos', overallScores);
+overallScores = scoreDataWriteXLS(meshData(meshData.Brightness > MEAN_HIGH_THRESH,:), xlsxName, 'BrightPhotos', overallScores);
 
-scoreDataWriteXLS(meshData(meshData.TotalPixels < PIX_THRESH,:), xlsxName, 'LowResPhotos');
-scoreDataWriteXLS(meshData(meshData.TotalPixels > PIX_THRESH,:), xlsxName, 'HighResPhotos');
+overallScores = scoreDataWriteXLS(meshData(meshData.Variance < VAR_LOW_THRESH,:), xlsxName, 'LowVarPhotos', overallScores);
+overallScores = scoreDataWriteXLS(meshData(meshData.Variance > VAR_LOW_THRESH | meshData.Variance < VAR_HIGH_THRESH,:), xlsxName, 'MediumVarPhotos', overallScores);
+overallScores = scoreDataWriteXLS(meshData(meshData.Variance > VAR_HIGH_THRESH,:), xlsxName, 'HighVarPhotos', overallScores);
 
+overallScores = scoreDataWriteXLS(meshData(meshData.TotalPixels < PIX_THRESH,:), xlsxName, 'LowResPhotos', overallScores);
+overallScores = scoreDataWriteXLS(meshData(meshData.TotalPixels > PIX_THRESH,:), xlsxName, 'HighResPhotos', overallScores);
+
+IndexC = strfind(meshData.HorizonPath, 'Conventional');
+Idx = cellfun(@(x) ~isempty(x), IndexC);
+overallScores = scoreDataWriteXLS(meshData(Idx,:), xlsxName, 'ConventionalWHPhotos', overallScores);
+
+IndexC = strfind(meshData.HorizonPath, 'Induced draft');
+Idx = cellfun(@(x) ~isempty(x), IndexC);
+overallScores = scoreDataWriteXLS(meshData(Idx,:), xlsxName, 'InducedDraftWHPhotos', overallScores);
+
+IndexC = strfind(meshData.HorizonPath, 'Tank\Rust');
+Idx = cellfun(@(x) ~isempty(x), IndexC);
+overallScores = scoreDataWriteXLS(meshData(Idx,:), xlsxName, 'RustOnTank', overallScores);
+
+IndexC = strfind(meshData.HorizonPath, 'Hot/cold piping');
+Idx = cellfun(@(x) ~isempty(x), IndexC);
+overallScores = scoreDataWriteXLS(meshData(Idx,:), xlsxName, 'RustOnPipes', overallScores);
+
+IndexC = strfind(meshData.HorizonPath, 'Venting system');
+Idx = cellfun(@(x) ~isempty(x), IndexC);
+overallScores = scoreDataWriteXLS(meshData(Idx,:), xlsxName, 'RustOnVenting', overallScores);
+
+writetable(overallScores,xlsxName,'Sheet','Summary','WriteRowNames',true);
 RemoveSheet123(xlsxName);
 
 end

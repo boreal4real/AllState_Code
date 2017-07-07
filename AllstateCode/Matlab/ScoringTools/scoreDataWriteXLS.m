@@ -1,4 +1,4 @@
-function [] = scoreDataWriteXLS(inputTable, xlsName, sheetName)
+function [overallResults] = scoreDataWriteXLS(inputTable, xlsName, sheetName, runTable)
 
 
 scoreTable1 = getScoreWithIdx(inputTable.WaterHeaterPresent, inputTable.HasWaterHeaterTruth, ':', 'AllData');
@@ -10,5 +10,20 @@ scoreTable5 = getScoreWithIdx(inputTable.RustSeverity, inputTable.RustSeverityTr
 scoreTable = [scoreTable1;scoreTable2;scoreTable3;scoreTable4;scoreTable5];
 
 writetable(scoreTable,xlsName,'Sheet',sheetName,'WriteRowNames',true);
+
+Accuracy = scoreTable1.Accuracy;
+Precision = scoreTable1.Precision;
+Sensitivity = scoreTable1.Sensitivity;
+Specificity = scoreTable1.Specificity;
+
+
+tempResults = table( Accuracy,...
+                 Precision,...
+                 Sensitivity,...
+                 Specificity,...
+                 'RowNames', {sheetName});
+
+overallResults = [runTable; tempResults];
+
 
 end
