@@ -23,9 +23,14 @@ meshData.HasRustTruth = logical(meshData.HasRustTruth);
 meshData.WaterHeaterPresent = logical(meshData.WaterHeaterPresent);
 meshData.RustPresent = logical(meshData.RustPresent);
 meshData.Test = logical(meshData.Test);
+meshData.Training = logical(meshData.Training);
 
-if(filterTest)
-   meshData = meshData(meshData.Test, :);
+if(nargin > 2)
+    if(filterTest)
+       meshData = meshData(meshData.Test, :);
+    else
+       meshData = meshData(meshData.Training, :);
+    end
 end
 overallScores = [];
 
