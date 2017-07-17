@@ -15,13 +15,13 @@
 whImagesTrain = imageDatastore('D:\TrainingSet4NN_Full_3Class_bal',...
     'IncludeSubfolders',true,...
     'LabelSource','foldernames');
-whImagesTrain.ReadFcn = @readAndResize;
+whImagesTrain.ReadFcn = @readAndResizeAlex;
 
 
 whImagesTest = imageDatastore('D:\TestSet_3Class',...
     'IncludeSubfolders',true,...
     'LabelSource','foldernames');
-whImagesTest.ReadFcn = @readAndResize;
+whImagesTest.ReadFcn = @readAndResizeAlex;
 
 
 %%

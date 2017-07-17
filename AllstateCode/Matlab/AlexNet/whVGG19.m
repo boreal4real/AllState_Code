@@ -12,13 +12,13 @@
 % Load the sample images as |ImageDatastore| objects.
 % [whImagesTrain,whImagesTest] = whData();
 
-whImagesTrain = imageDatastore('D:\TrainingSet4NN_Full_3Class_bal',...
+whImagesTrain = imageDatastore('D:\TrainingSet4RustNoise',...
     'IncludeSubfolders',true,...
     'LabelSource','foldernames');
 whImagesTrain.ReadFcn = @readAndResize;
 
 
-whImagesTest = imageDatastore('D:\TestSet_3Class',...
+whImagesTest = imageDatastore('D:\TrainingSet4RustNoise',...
     'IncludeSubfolders',true,...
     'LabelSource','foldernames');
 whImagesTest.ReadFcn = @readAndResize;
@@ -83,7 +83,7 @@ layers = [...
 
 options = trainingOptions('sgdm',...
     'MiniBatchSize',20,...
-    'MaxEpochs',10,...
+    'MaxEpochs',4,...
     'InitialLearnRate',0.0001,...
     'ExecutionEnvironment', 'gpu');
 
@@ -97,18 +97,18 @@ predictedLabels = classify(netTransfer,whImagesTest);
 
 %%
 % Display four sample test images with their predicted labels.
-% idx = [1 4 7 10];
-% figure
-% for i = 1:numel(idx)
-%     subplot(2,2,i)
-%     
-%     I = readimage(whImagesTest,idx(i));
-%     label = predictedLabels(idx(i));
-%     
-%     imshow(I)
-%     title(char(label))
-%     drawnow
-% end
+idx = [1 4 7 10];
+figure
+for i = 1:numel(idx)
+    subplot(2,2,i)
+    
+    I = readimage(whImagesTest,idx(i));
+    label = predictedLabels(idx(i));
+    
+    imshow(I)
+    title(char(label))
+    drawnow
+end
 
 %%
 % Calculate the classification accuracy.
