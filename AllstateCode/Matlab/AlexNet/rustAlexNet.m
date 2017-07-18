@@ -12,21 +12,18 @@
 % Load the sample images as |ImageDatastore| objects.
 % [whImagesTrain,whImagesTest] = whData();
 
-whImagesTrain = imageDatastore('C:\Training4NN_resize_224x224',...
+whImagesTrain = imageDatastore('C:\TrainingRust_Severity',...
     'IncludeSubfolders',true,...
     'LabelSource','foldernames');
-whImagesTrain.ReadFcn = @readAndResize;
 
-whImagesTest = imageDatastore('C:\Training4NN_resize_224x224',...
+whImagesTest = imageDatastore('C:\TestRust_Severity',...
     'IncludeSubfolders',true,...
     'LabelSource','foldernames');
-whImagesTest.ReadFcn = @readAndResize;
-
 
 %%
 % Load a pretrained AlexNet network.
-% net = alexnet;
-net = vgg19;
+net = alexnet;
+% net = vgg19;
 %%
 % The last three layers of the pretrained network |net| are configured for
 % 1000 classes. These three layers must be fine-tuned for the new
@@ -74,14 +71,8 @@ layers = [...
 % many epochs. To speed up training, you can reduce the value of the
 % |'MaxEpochs'| name-value pair argument in the call to |trainingOptions|.
 % To reduce memory usage, reduce |'MiniBatchSize'|.
-% options = trainingOptions('sgdm',...
-%     'MiniBatchSize',50,...
-%     'MaxEpochs',10,...
-%     'InitialLearnRate',0.0001,...
-%     'ExecutionEnvironment', 'multi-gpu');
-
 options = trainingOptions('sgdm',...
-    'MiniBatchSize',20,...
+    'MiniBatchSize',5,...
     'MaxEpochs',10,...
     'InitialLearnRate',0.0001,...
     'OutputFcn',@plotTrainingAccuracy);
@@ -96,18 +87,18 @@ predictedLabels = classify(netTransfer,whImagesTest);
 
 %%
 % Display four sample test images with their predicted labels.
-% idx = [1 4 7 10];
-% figure
-% for i = 1:numel(idx)
-%     subplot(2,2,i)
-%     
-%     I = readimage(whImagesTest,idx(i));
-%     label = predictedLabels(idx(i));
-%     
-%     imshow(I)
-%     title(char(label))
-%     drawnow
-% end
+idx = [1 4 7 10];
+figure
+for i = 1:numel(idx)
+    subplot(2,2,i)
+    
+    I = readimage(whImagesTest,idx(i));
+    label = predictedLabels(idx(i));
+    
+    imshow(I)
+    title(char(label))
+    drawnow
+end
 
 %%
 % Calculate the classification accuracy.

@@ -14,9 +14,10 @@ tempNames = cellfun(@(x) strsplit(x, '\'), whImagesTest.Files, 'UniformOutput', 
 tempNames2 = cellfun(@(x) strsplit(x{end}, '.'), tempNames, 'UniformOutput', false);
 ImageID = cellfun(@(x) x{1}, tempNames2,  'UniformOutput', false);
 
-WaterHeaterPresent = int8(whImagesTest.Labels == 'WaterHeater');
-RustPresent = int8(whImagesTest.Labels == 'Rust');
-RustSeverity = int8(whImagesTest.Labels == 'Rust');
+WaterHeaterPresent = int8(predictedLabels == 'WaterHeater');
+RustPresent = int8(predictedLabels == 'Rust');
+RustSeverity = int8(predictedLabels == 'Rust');
+% predClass = int8(predictedLabels == 'WaterHeater');
 
 tableResults = table( ImageID,...
                  WaterHeaterPresent,...
