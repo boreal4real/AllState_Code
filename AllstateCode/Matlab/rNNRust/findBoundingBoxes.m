@@ -15,6 +15,7 @@ BoundingBox = zeros(NUMIMAGES,4);
 Confidence = zeros(NUMIMAGES,1);
 allFileNames = [];
 i = 0;
+stop = min(stop, numel(imageNames));
 for k = start:stop
     i = i +1;
     curFile = imageNames{k};
