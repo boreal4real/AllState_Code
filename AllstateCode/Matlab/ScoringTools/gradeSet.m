@@ -28,6 +28,10 @@ meshData.Training = logical(meshData.Training);
 if(nargin > 2)
     if(filterTest)
        meshData = meshData(meshData.Test, :);
+%        IndexC = strfind(meshData.HorizonPath, 'Venting system');
+%        Idx = cellfun(@(x) ~isempty(x), IndexC);
+%        meshData = meshData(~Idx, :);
+
     else
        meshData = meshData(meshData.Training, :);
     end
