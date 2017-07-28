@@ -28,9 +28,9 @@ meshData.Training = logical(meshData.Training);
 if(nargin > 2)
     if(filterTest)
        meshData = meshData(meshData.Test, :);
-%        IndexC = strfind(meshData.HorizonPath, 'Venting system');
-%        Idx = cellfun(@(x) ~isempty(x), IndexC);
-%        meshData = meshData(~Idx, :);
+       IndexC = strfind(meshData.HorizonPath, 'Venting system');
+       Idx = cellfun(@(x) ~isempty(x), IndexC);
+       meshData = meshData(~Idx, :);
 
     else
        meshData = meshData(meshData.Training, :);
@@ -50,7 +50,7 @@ overallScores = scoreDataWriteXLS(meshData(meshData.Variance > VAR_HIGH_THRESH,:
 overallScores = scoreDataWriteXLS(meshData(meshData.TotalPixels < PIX_THRESH,:), xlsxName, 'LowResPhotos', overallScores);
 overallScores = scoreDataWriteXLS(meshData(meshData.TotalPixels > PIX_THRESH,:), xlsxName, 'HighResPhotos', overallScores);
 
-IndexC = strfind(meshData.HorizonPath, 'Conventional');
+IndexC = strfind(meshData.HorizonPath, 'Water heater type\Conventional');
 Idx = cellfun(@(x) ~isempty(x), IndexC);
 overallScores = scoreDataWriteXLS(meshData(Idx,:), xlsxName, 'ConventionalWHPhotos', overallScores);
 
