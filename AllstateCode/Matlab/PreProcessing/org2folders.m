@@ -24,6 +24,9 @@ TrainingSetMetadata = readtable(excelFile);
 WHimages = TrainingSetMetadata.ImageID(logical(TrainingSetMetadata.HasWaterHeater) & ~logical(TrainingSetMetadata.HasRust));
 WHimagesPath = cellfun(@(x) [origFolder '\'  x '.jpg'], WHimages, 'UniformOutput', false);
 
+% WHimages = TrainingSetMetadata.ImageID(logical(TrainingSetMetadata.HasWaterHeater));
+% WHimagesPath = cellfun(@(x) [origFolder '\'  x '.jpg'], WHimages, 'UniformOutput', false);
+
 NoiseImages = TrainingSetMetadata.ImageID(~logical(TrainingSetMetadata.HasWaterHeater));
 NoiseimagesPath = cellfun(@(x) [origFolder '\'  x '.jpg'], NoiseImages, 'UniformOutput', false);
 

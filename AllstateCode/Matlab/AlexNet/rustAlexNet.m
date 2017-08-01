@@ -87,18 +87,18 @@ predictedLabels = classify(netTransfer,whImagesTest);
 
 %%
 % Display four sample test images with their predicted labels.
-idx = [1 4 7 10];
-figure
-for i = 1:numel(idx)
-    subplot(2,2,i)
-    
-    I = readimage(whImagesTest,idx(i));
-    label = predictedLabels(idx(i));
-    
-    imshow(I)
-    title(char(label))
-    drawnow
-end
+% idx = [1 4 7 10];
+% figure
+% for i = 1:numel(idx)
+%     subplot(2,2,i)
+%     
+%     I = readimage(whImagesTest,idx(i));
+%     label = predictedLabels(idx(i));
+%     
+%     imshow(I)
+%     title(char(label))
+%     drawnow
+% end
 
 %%
 % Calculate the classification accuracy.

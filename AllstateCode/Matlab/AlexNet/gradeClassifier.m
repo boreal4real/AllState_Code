@@ -8,7 +8,7 @@ whImagesTest = imageDatastore(inputDataPath,...
 
 predictedLabels = classify(myAlex,whImagesTest);
 
-predictedSeverity = classify(rustDetect,whImagesTest);
+% predictedSeverity = classify(rustDetect,whImagesTest);
 
 
 
@@ -18,26 +18,26 @@ ImageID = cellfun(@(x) x{1}, tempNames2,  'UniformOutput', false);
 
 WaterHeaterPresent = int8(predictedLabels == 'WaterHeater' | predictedLabels == 'Rust');
 RustPresent = int8(predictedLabels == 'Rust');
-% RustSeverity = int8(predictedLabels == 'Rust');
+RustSeverity = int8(predictedLabels == 'Rust');
 
-for i = 1:numel(predictedLabels)
-    if(predictedLabels(i) == 'Rust')
-        switch predictedSeverity(i)
-            case 'HighRust'
-                RustSeverity(i) = 3;
-            case 'MedRust'
-                RustSeverity(i) = 2;
-            case 'LowRust'
-                RustSeverity(i) = 1;
-        end
-    else
-        RustSeverity(i) = 0;
-    end
-    
-    
-end
+% for i = 1:numel(predictedLabels)
+%     if(predictedLabels(i) == 'Rust')
+%         switch predictedSeverity(i)
+%             case 'HighRust'
+%                 RustSeverity(i) = 3;
+%             case 'MedRust'
+%                 RustSeverity(i) = 2;
+%             case 'LowRust'
+%                 RustSeverity(i) = 1;
+%         end
+%     else
+%         RustSeverity(i) = 0;
+%     end
+%     
+%     
+% end
 % predClass = int8(predictedLabels == 'WaterHeater');
-RustSeverity = transpose(RustSeverity);
+% RustSeverity = transpose(RustSeverity);
 tableResults = table( ImageID,...
                  WaterHeaterPresent,...
                  RustPresent,...

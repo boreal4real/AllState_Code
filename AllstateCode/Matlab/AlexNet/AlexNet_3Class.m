@@ -12,16 +12,16 @@
 % Load the sample images as |ImageDatastore| objects.
 % [whImagesTrain,whImagesTest] = whData();
 
-whImagesTrain = imageDatastore('D:\TrainingSet4NN_Full_3Class_bal',...
+whImagesTrain = imageDatastore('C:\Training_3Class_resize_227x227',...
     'IncludeSubfolders',true,...
     'LabelSource','foldernames');
-whImagesTrain.ReadFcn = @readAndResizeAlex;
+% whImagesTrain.ReadFcn = @readAndResizeAlex;
 
 
-whImagesTest = imageDatastore('D:\TestSet_3Class',...
+whImagesTest = imageDatastore('C:\Test_3Class_resize_227x227',...
     'IncludeSubfolders',true,...
     'LabelSource','foldernames');
-whImagesTest.ReadFcn = @readAndResizeAlex;
+% whImagesTest.ReadFcn = @readAndResizeAlex;
 
 
 %%
