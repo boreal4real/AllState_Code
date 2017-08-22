@@ -1,0 +1,9 @@
+outPC1 = getPointCloud ('C:\2011_10_03_drive_0047_sync','C:\2011_10_03_calib', 1);
+outPC2 = getPointCloud ('C:\2011_10_03_drive_0047_sync','C:\2011_10_03_calib', 2);
+outPC3 = getPointCloud ('C:\2011_10_03_drive_0047_sync','C:\2011_10_03_calib', 3);
+outPC4 = getPointCloud ('C:\2011_10_03_drive_0047_sync','C:\2011_10_03_calib', 4);
+outPC5 = getPointCloud ('C:\2011_10_03_drive_0047_sync','C:\2011_10_03_calib', 5);
+outPC6 = getPointCloud ('C:\2011_10_03_drive_0047_sync','C:\2011_10_03_calib', 6);
+
+tform = pcregrigid(outPC2, outPC1, 'Metric','pointToPlane','Extrapolate', true);
+ptCloudAligned = pctransform(outPC2,tform);
