@@ -1,5 +1,5 @@
-whData = readtable('F:\CompanyResults\SkyMind\AllstateWaterHeaterClassifierResults.xlsx', 'Sheet', 'TestSetB');
-rustData = readtable('F:\CompanyResults\SkyMind\AllstateRustClassifierResults.xlsx', 'Sheet', 'TestSetB');
+whData = readtable('F:\CompanyResults\SkyMind\AllstateWaterHeaterResults.xlsx', 'Sheet', 'TestSetB');
+rustData = readtable('F:\CompanyResults\SkyMind\AllstateRustResults.xlsx', 'Sheet', 'TestSetB');
 severityData = readtable('F:\CompanyResults\SkyMind\AllstateRustSeverityResults.xlsx',  'Sheet', 'TestSetB');
 
 meshData = innerjoin(whData, rustData, 'Key', 'ImageID');
@@ -28,4 +28,4 @@ end
 
 myTable = table(ImageID, WaterHeaterPresent, RustPresent, RustSeverity);
 
-writetable(myTable, 'SkyMind_B.xlsx');
+writetable(myTable, 'SkyMind_C.xlsx');

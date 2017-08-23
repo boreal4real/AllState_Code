@@ -25,6 +25,21 @@ meshData.RustPresent = logical(meshData.RustPresent);
 meshData.Test = logical(meshData.Test);
 meshData.Training = logical(meshData.Training);
 
+[ turkData ] = loadTurk( 'TurkResults.xlsx' );
+
+for i = 1:length(meshData.ImageID)
+    fIdx = strfind(turkData.imageID, meshData.ImageID{i});
+    fIdx = cellfun(@(x) ~isempty(x), fIdx);
+    fIdx = find(fIdx);
+   if(~isempty(fIdx))
+       meshData.HasWaterHeaterTruth(i) = turkData.WaterHeaterPresent(fIdx);
+       meshData.HasRustTruth(i) = turkData.RustPresent(fIdx);
+   end
+    
+    
+end
+
+
 if(nargin > 2)
     if(filterTest)
        meshData = meshData(meshData.Test, :);
