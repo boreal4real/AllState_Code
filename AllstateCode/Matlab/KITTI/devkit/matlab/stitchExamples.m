@@ -61,7 +61,7 @@ ptCloudAligned = pctransform(ptCloudCurrent,tform);
 % cloud, and decrease the merge size to increase the scene resolution.
 
 %%
-mergeSize = 0.015;
+mergeSize = 0.0015;
 ptCloudScene = pcmerge(ptCloudRef, ptCloudAligned, mergeSize);
 
 % Visualize the input images.
@@ -96,7 +96,7 @@ drawnow
 accumTform = tform; 
 
 figure
-hAxes = pcshow(ptCloudScene, 'VerticalAxis','Y', 'VerticalAxisDir', 'Down');
+hAxes = pcshow(ptCloudScene, 'VerticalAxis','Z', 'VerticalAxisDir', 'Up');
 title('Updated world scene')
 % Set the axes property for faster rendering
 hAxes.CameraViewAngleMode = 'auto';

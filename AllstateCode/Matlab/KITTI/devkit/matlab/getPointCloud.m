@@ -39,7 +39,7 @@ for i = 1:length(cams)
 
 
     % remove all points behind image plane (approximation
-    idx = velo(:,1)<5;
+    idx = velo(:,1)<5 | velo(:,2) > 30;
     velo(idx,:) = [];
 
     % project to image plane (exclude luminance)
